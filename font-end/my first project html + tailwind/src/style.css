@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer components {
+    .nav_link{
+        @apply mx-2 pt-1 pb-2 px-2 block justify-center items-center rounded-xl text-gray-200 font-bold transition-colors hover:bg-gray-500;
+    }
+    .product{
+        @apply flex flex-col relative m-4 transition-colors hover:bg-neutral-500 p-3 rounded-2xl;
+        &:hover .price {
+            @apply transition-colors bg-yellow-400 text-black rounded-xs;
+        }
+    }
+    .img{
+        @apply rounded-2xl w-full max-w-[260px] max-h-[180px];
+    }
+    .status__popular{
+        @apply absolute top-0 left-0 bg-yellow-300 m-2 px-2 pb-1 rounded-xl font-semibold ;
+    }
+    .status__sold{
+        @apply absolute bottom-0 right-0 text-red-400 font-medium;
+    }
+    .description{
+        @apply flex justify-between my-2 font-semibold text-white gap-2;
+    }
+    .price{
+        @apply  bg-green-200 pb-1 px-3 font-semibold rounded-xs ;
+    }
+    .rate{
+        @apply flex items-center relative;
+    }
+    .fa-star{
+        @apply  text-yellow-300 me-1;
+    }
+    .star-point{
+        @apply text-white font-semibold;
+    }
+    .vote{
+        @apply text-neutral-500;
+    }
+}
